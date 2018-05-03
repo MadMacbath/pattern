@@ -1,6 +1,8 @@
 package com.macbeth.pattern.day1.demo1;
 
-import com.macbeth.pattern.day1.demo1.impl.MallardDuck;
+import com.macbeth.pattern.day1.demo1.impl.*;
+import com.macbeth.pattern.day1.demo1.practice.DuckCall;
+import com.macbeth.pattern.day1.demo1.practice.impl.PreciseDuckCall;
 
 /***
  * @author : macbeth
@@ -10,8 +12,8 @@ import com.macbeth.pattern.day1.demo1.impl.MallardDuck;
 public class MiniDuckSimulator {
 
     public static void main(String[] args) {
-        Duck mallard = new MallardDuck();
-        mallard.performFly();
-        mallard.performQuack();
+        DuckCall duckCall = new PreciseDuckCall();
+        duckCall.setQuackBehavior(new Quack());
+        duckCall.performQuack();
     }
 }
